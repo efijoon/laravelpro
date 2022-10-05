@@ -11,14 +11,15 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
 
     <!-- Scripts -->
-{{--    @vite(['resources/sass/app.scss', 'resources/js/app.js'])--}}
-    <link rel="stylesheet" href="/build/assets/app.5380b351.css">
-    <script src="/build/assets/app.024077bb.js"></script>
+{{--     @vite(['resources/sass/app.scss', 'resources/js/app.js'])--}}
+
+    <link rel="stylesheet" href="/build/assets/app.0faaec30.css">
+    <script src="/build/assets/app.18e573bd.js"></script>
 </head>
-<body>
+<body style="font-family: Vazir !important;overflow-x: hidden">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -36,7 +37,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav mr-auto">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))

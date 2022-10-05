@@ -19,17 +19,17 @@
 
                         <div class="row">
                             <div class="form-group col-sm-3">
-                                <label for="inputEmail3" class="col-sm-2 control-label">ایمیل</label>
+                                <label for="inputEmail3" class="control-label">ایمیل</label>
                                 <input name="email" type="email" class="form-control" placeholder="ایمیل را وارد کنید" value="{{ old('email', $user->email) }}">
                             </div>
 
                             <div class="form-group col-sm-3">
-                                <label for="inputEmail3" class="col-sm-2 control-label">نام</label>
+                                <label for="inputEmail3" class="control-label">نام</label>
                                 <input name="name" class="form-control" placeholder="نام را وارد کنید" value="{{ old('name', $user->name) }}">
                             </div>
 
                             <div class="form-group col-sm-3">
-                                <label for="inputPassword3" class="col-sm-2 control-label">پسورد</label>
+                                <label for="inputPassword3" class="control-label">پسورد</label>
                                 <input name="password" type="password" class="form-control" placeholder="پسورد را وارد کنید" value="{{ old('password') }}">
                             </div>
                         </div>

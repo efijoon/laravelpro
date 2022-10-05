@@ -67,12 +67,16 @@
                                 </td>
                                 <td>
                                     <form action="/admin/users/{{ $user->id }}" method="post">
-                                        @can('update', $user)
-                                            <a class="btn btn-primary btn-sm" href="/admin/users/{{ $user->id }}/edit">ویرایش</a>
-                                        @endcan
+                                        <a class="btn btn-primary btn-sm" href="/admin/users/{{ $user->id }}/edit">ویرایش</a>
 
                                         @csrf @method("delete")
                                         <button class="btn btn-danger btn-sm">حذف</button>
+
+                                        @if($user->is_staff)
+                                            <a class="btn btn-warning btn-sm" href="/admin/users/{{ $user->id }}/permissions">
+                                                سطوح دسترسی
+                                            </a>
+                                        @endif
                                     </form>
                                 </td>
                             </tr>

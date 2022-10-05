@@ -207,7 +207,9 @@
   float: right; }
 .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
   margin-left: 5px;
-  margin-right: auto; }
+  margin-right: auto;
+  background: dodgerblue;
+  border-color: dodgerblue;}
 .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove {
   margin-left: 2px;
   margin-right: auto; }
