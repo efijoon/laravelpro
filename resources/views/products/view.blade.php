@@ -51,8 +51,13 @@
         @include('layouts.errors')
 
         <div class="card">
-          <div class="card-header">
+          <div class="card-header d-flex justify-content-between">
             {{ $product->name }}
+
+            <form action="/cart/add/{{ $product->id }}" method="post">
+              @csrf
+              <button class="btn btn-sm btn-danger">اضافه کردن به سبد خرید</button>
+            </form>
           </div>
 
           <div class="card-body">
@@ -73,7 +78,7 @@
           @endauth
         </div>
 
-        @foreach($product->comments()->where('approved', 0)->where('parent_id', 0)->get() as $comment)
+        @foreach($product->comments()->where('approved', 1)->where('parent_id', 0)->get() as $comment)
           <div class="card {{ $loop->first ?: 'mt-5' }}">
             <div class="card-header d-flex justify-content-between">
               <div class="commenter d-flex">

@@ -42,25 +42,25 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($products as $product)
-                            <tr>
-                                <td>{{ $product->id }}</td>
-                                <td>
-                                    <img src="/uploads/product/{{ $product->name }}" alt="product-image">
-                                </td>
-                                <td>{{ $product->name }}</td>
-                                <td>{{ $product->stock }}</td>
-                                <td>{{ $product->views_count }}</td>
-                                <td>
-                                    <form action="/admin/products/{{ $product->id }}" method="post">
-                                        <a class="btn btn-primary btn-sm" href="/admin/products/{{ $product->id }}/edit">ویرایش</a>
+                          @foreach($products as $product)
+                              <tr>
+                                  <td>{{ $product->id }}</td>
+                                  <td>
+                                      <img src="/uploads/product/{{ $product->name }}" alt="product-image">
+                                  </td>
+                                  <td>{{ $product->name }}</td>
+                                  <td>{{ $product->stock }}</td>
+                                  <td>{{ $product->views_count }}</td>
+                                  <td>
+                                      <form action="/admin/products/{{ $product->id }}" method="post">
+                                          <a class="btn btn-primary btn-sm" href="/admin/products/{{ $product->id }}/edit">ویرایش</a>
 
-                                        @csrf @method("delete")
-                                        <button class="btn btn-danger btn-sm">حذف</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
+                                          @csrf @method("delete")
+                                          <button class="btn btn-danger btn-sm">حذف</button>
+                                      </form>
+                                  </td>
+                              </tr>
+                          @endforeach
                         </tbody>
                     </table>
                 </div>
